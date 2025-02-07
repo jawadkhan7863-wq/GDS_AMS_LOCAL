@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lock Screen</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    textarea {
+      width: 300px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>Your screen was locked. Please provide a reason for invisibility:</h2>
+    <form id="reason-form">
+      <textarea id="reason" placeholder="Enter your reason here..."></textarea><br>
+      <button type="submit">Submit Reason</button>
+    </form>
+  </div>
+
+  <script>
+    // Access ipcRenderer via contextBridge (from preload.js)
+    const electron = window.electron;
+
+    document.getElementById('reason-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const reason = document.getElementById('reason').value.trim();
+
+      if (reason) {
+        // Send reason to main process and unlock the system
+        electron.ipcRenderer.send('unlock-screen', reason);
+      }
+    });
+  </script>
+</body>
+</html>

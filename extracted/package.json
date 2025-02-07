@@ -1,0 +1,17 @@
+{
+  "name": "desktop_app",
+  "version": "1.0.0",
+  "description": "A desktop application built with Electron, Express, and MongoDB.",
+  "main": "main.js",
+  "author": "Your Name <youremail@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "activity-tracker": "^1.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "moment-timezone": "^0.5.46",
+    "mongoose": "^8.9.3",
+    "node-windows": "^1.0.0-beta.8"
+  }
+}
