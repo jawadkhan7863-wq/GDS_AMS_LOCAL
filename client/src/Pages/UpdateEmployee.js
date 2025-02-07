@@ -62,7 +62,7 @@ const UpdateEmployee = () => {
       };
       console.log("Form Data: ", updatedData);
 
-      const response = await axios.put(`http://172.16.0.5:5000/update-employee/${id}`, updatedData);
+      const response = await axios.put(`http://147.93.119.175:5000/update-employee/${id}`, updatedData);
       console.log('✅ Record updated successfully:', response.data);
 
       toast.success('✅ Record updated successfully');

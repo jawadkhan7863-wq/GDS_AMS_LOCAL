@@ -76,7 +76,7 @@ const EmployeeRegistration = () => {
     }
 
     try {
-      const response = await axios.post('http://172.16.0.5:5000/register-employee', formData);
+      const response = await axios.post('http://147.93.119.175:5000/register-employee', formData);
       console.log('Form submitted successfully:', response.data);
       toast.success('Form submitted successfully');
       setFormData({

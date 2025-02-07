@@ -16,5 +16,5 @@ app.whenReady().then(() => {
     },
   });
 
-  mainWindow.loadURL('http://172.16.0.5:3000/dashboard'); // Replace with your frontend URL
+  mainWindow.loadURL('http://147.93.119.175:3000/dashboard'); // Replace with your frontend URL
 });

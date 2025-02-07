@@ -67,7 +67,7 @@ function Logout() {
   
       let data; // Declare 'data' at the top of the try block
       try {
-        const response = await fetch("http://172.16.0.5:5000/auth/logout", {
+        const response = await fetch("http://147.93.119.175:5000/auth/logout", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

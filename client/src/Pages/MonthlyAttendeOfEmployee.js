@@ -14,7 +14,7 @@ const EmployeeAttendance = () => {
     useEffect(() => {
         const fetchAttendanceRecords = async () => {
             try {
-                const response = await axios.get(`http://172.16.0.5:5000/attendance/employee/${id}`);
+                const response = await axios.get(`http://147.93.119.175:5000/attendance/employee/${id}`);
 
                 // Access totalPresents and totalLeaves from the API response
                 const { totalPresents, totalLeaves, attendanceRecords } = response.data;

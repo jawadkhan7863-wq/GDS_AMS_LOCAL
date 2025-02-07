@@ -23,7 +23,7 @@ const EmployeeDetail = () => {
   useEffect(() => {
     const fetchEmployeeDetail = async () => {
       try {
-        const response = await axios.get(`http://172.16.0.5:5000/employee-detail/${id}`);
+        const response = await axios.get(`http://147.93.119.175:5000/employee-detail/${id}`);
         setEmployee(response.data.employee);
 
       } catch (err) {
@@ -43,7 +43,7 @@ const EmployeeDetail = () => {
       const confirmDelete = window.confirm('Are you sure you want to delete this employee?');
       if (!confirmDelete) return;
 
-      await axios.delete(`http://172.16.0.5:5000/delete-employee/${employeeId}`);
+      await axios.delete(`http://147.93.119.175:5000/delete-employee/${employeeId}`);
       toast.success('Employee deleted successfully');
 
       // Redirect back to employee list

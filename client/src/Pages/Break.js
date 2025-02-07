@@ -42,8 +42,8 @@ const Break = ({ attendanceId: initialAttendanceId }) => {
 
     try {
       const url = isBreakActive
-        ? "http://172.16.0.5:5000/end-break"
-        : "http://172.16.0.5:5000/start-break";
+        ? "http://147.93.119.175:5000/end-break"
+        : "http://147.93.119.175:5000/start-break";
 
       const body = isBreakActive
         ? { breakId: currentBreakId }

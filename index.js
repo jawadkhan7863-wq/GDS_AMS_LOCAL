@@ -11,7 +11,7 @@ const BreakRoute = require("./Routes/BreakRoute.js");
 
 const app = express();
 app.use(cors({
-  url: 'http://172.16.0.5:3000'
+  url: 'http://147.93.119.175:3000'
 }));
 app.use(express.json());
 
@@ -38,7 +38,7 @@ const port = 5000;
 
 // Start the Express server
 // Listen on the static IP
-const staticIp = '172.16.0.5';  // Your static IP address
+const staticIp = '147.93.119.175';  // Your static IP address
 app.listen(port, staticIp, () => {
   console.log(`Server is running at http://${staticIp}:${port}`);
 });

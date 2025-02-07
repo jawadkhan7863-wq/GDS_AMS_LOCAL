@@ -13,7 +13,7 @@ const AllEmployees = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get('http://172.16.0.5:5000/all-employees');
+        const response = await axios.get('http://147.93.119.175:5000/all-employees');
         setEmployees(response.data.employees);
       } catch (err) {
         setError(err.response?.data?.message || 'Failed to fetch employees');

@@ -18,7 +18,7 @@ const Dashboard = () => {
   useEffect(() => {
     const atteendanceList = async () => {
       try {
-        const response = await axios.get('http://172.16.0.5:5000/attendance/summary');
+        const response = await axios.get('http://147.93.119.175:5000/attendance/summary');
         const attendance = response.data.loggedInEmployees;
 
         // Fetch user data from localStorage when the component mounts

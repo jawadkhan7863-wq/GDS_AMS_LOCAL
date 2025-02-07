@@ -8,7 +8,7 @@ const AllTodayPresent = () => {
   useEffect(() => {
     const fetchAttendance = async () => {
       try {
-        const response = await axios.get('http://172.16.0.5:5000/attendance/summary');
+        const response = await axios.get('http://147.93.119.175:5000/attendance/summary');
         const presentEmployeesData = response.data.loggedInEmployees || [];
 
         console.log("Present employees: ", presentEmployeesData);
